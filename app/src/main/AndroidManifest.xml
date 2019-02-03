@@ -8,12 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name="com.project.onex.appDI.App"
+        android:name=".appDI.App"
         android:theme="@style/AppTheme">
-        <activity android:name="com.project.onex.ui.activities.FailureDeepLinkActivity"></activity>
-        <activity android:name="com.project.onex.ui.activities.SuccessDeepLinkActivity" />
-        <activity android:name="com.project.onex.ui.activities.MainActivity"
-                  android:theme="@style/SplashTheme"
+        <activity android:name=".activities.FailureDeepLinkActivity"></activity>
+        <activity android:name=".activities.SuccessDeepLinkActivity" />
+        <activity android:name=".activities.MainActivity"
+            android:theme="@style/SplashTheme"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             <intent-filter>
                 <data
                     android:host="open"
-                    android:scheme="deeplinkonex" />
+                    android:scheme="deeplinkadonex" />
 
                 <action android:name="android.intent.action.VIEW" />
 
@@ -56,14 +56,14 @@
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-            <category android:name="android.intent.category.DEFAULT" />
-            <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-            <data android:scheme="@string/fb_login_protocol_scheme" />
-        </intent-filter>
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
         </activity>
     </application>
 

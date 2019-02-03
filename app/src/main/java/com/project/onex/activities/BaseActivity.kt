@@ -1,4 +1,4 @@
-package com.project.onex.ui.activities
+package com.project.onex.activities
 
 import android.content.Intent
 import android.net.Uri

@@ -1,10 +1,12 @@
-package com.project.onex.ui.activities;
+package com.project.onex.activities;
 
 import android.os.Bundle;
 
+import com.project.onex.PostRequset.PostRequset;
 import com.project.onex.R;
 
 import static com.project.onex.utils.Constants.LINK_FAILURE;
+import static com.project.onex.utils.Constants.LINK_SUCCESS;
 
 public class FailureDeepLinkActivity extends BaseActivity  {
 

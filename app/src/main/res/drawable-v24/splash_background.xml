@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/background_onexbet_2" />
+            android:src="@drawable/background_onex_3" />
     </item>
 
 </layer-list>

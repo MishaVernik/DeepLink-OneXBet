@@ -1,4 +1,4 @@
-package com.project.onex.ui.activities
+package com.project.onex.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,14 +6,13 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.view.Window
-import android.view.WindowManager
 
 import com.facebook.FacebookSdk
 import com.facebook.LoggingBehavior
 import com.facebook.appevents.AppEventsLogger
 import com.facebook.applinks.AppLinkData
 import com.project.onex.api.API
+
 import com.project.onex.R
 import com.project.onex.adapters.RecyclerAdapter
 import com.project.onex.models.Response
@@ -33,9 +32,6 @@ class MainActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
 
         FacebookSdk.sdkInitialize(applicationContext)
