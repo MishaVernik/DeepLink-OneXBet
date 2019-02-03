@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Deep Links OneX</string>
+    <string name="facebook_app_id">624392974684640</string>
+    <string name="fb_login_protocol_scheme">fb624392974684640</string>
+</resources>
