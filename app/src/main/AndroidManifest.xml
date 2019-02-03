@@ -24,7 +24,7 @@
             <intent-filter>
                 <data
                     android:host="open"
-                    android:scheme="deeplinkad" />
+                    android:scheme="deeplinkonex" />
 
                 <action android:name="android.intent.action.VIEW" />
 
@@ -36,7 +36,7 @@
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider539184906566610"
+            android:authorities="com.facebook.app.FacebookContentProvider624392974684640"
             android:exported="true" />
 
         <meta-data
