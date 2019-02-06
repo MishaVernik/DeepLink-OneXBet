@@ -3,21 +3,38 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
+// alias: deeplink
+// password1: onexbet
+// password2: onexbet
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.project.onex"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 5
+        versionName "5.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
     buildTypes {
+
+        debug {
+//            minifyEnabled true
+//            shrinkResources true
+//
+//            proguardFiles 'proguard-rules.pro'
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            //       minifyEnabled true
+            //        shrinkResources true
+
+            //           proguardFiles 'proguard-rules.pro'
         }
     }
 }
@@ -57,5 +74,6 @@ dependencies {
     implementation rxjava2Dependencies.rxandroid
     implementation rxjava2Dependencies.rxjava
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.anko:anko-sdk15:0.9'
 }
 

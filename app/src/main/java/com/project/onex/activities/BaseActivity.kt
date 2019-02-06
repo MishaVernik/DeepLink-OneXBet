@@ -1,19 +1,22 @@
-package com.project.onex.activities
+package com.project.onex.ui.activities
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.v7.app.AppCompatActivity
 import com.project.onex.PostRequset.PostRequset
 import com.project.onex.utils.Constants.LINK_FAILURE
 import com.project.onex.utils.Constants.LINK_SUCCESS
+import dagger.android.support.DaggerAppCompatActivity
 import okhttp3.*
 import java.io.IOException
 
 abstract class BaseActivity : AppCompatActivity(), PostRequset {
 
   abstract fun layoutID(): Int
+
+  open fun showWebView(url: String) {
+
+  }
 
   @CallSuper
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,15 +35,11 @@ abstract class BaseActivity : AppCompatActivity(), PostRequset {
       override fun onResponse(call: Call, response: Response) {
         if (response.isSuccessful) {
           runOnUiThread {
-            val intent = Intent(Intent.ACTION_VIEW)
-
             if (link.contentEquals(LINK_SUCCESS)) {
-              intent.data = Uri.parse(link)
+              showWebView(link)
             } else if (link.contentEquals(LINK_FAILURE)) {
-              intent.data = Uri.parse(link)
+              showWebView(link)
             }
-
-            startActivity(intent)
           }
         }
       }

@@ -9,7 +9,14 @@ import com.project.onex.R
 import com.project.onex.holder.MatchHolder
 import com.project.onex.models.Response
 
-class RecyclerAdapter(private val info: List<Response>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    val info = ArrayList<Response>()
+
+    fun addElements(elements : List<Response>){
+        info.addAll(elements)
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): RecyclerView.ViewHolder {
         val rootView = LayoutInflater.from(viewGroup.context).inflate(R.layout.list_item, viewGroup, false)

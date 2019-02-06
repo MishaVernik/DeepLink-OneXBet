@@ -4,10 +4,4 @@
 
     <item android:drawable="@color/silver" />
 
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/background_onex_3" />
-    </item>
-
 </layer-list>
